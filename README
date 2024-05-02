@@ -1,14 +1,17 @@
 REQUIREMENTS:
-  LINUX:
-    Docker: Docker version 25.0.2, build 29cf629
-  Windows/Mac:
-    1.Docker desktop
-    2.WSL
-    3.Docker version 25.0.2, build 29cf629
+  Docker:
+    LINUX:
+      Docker version 25.0.2, build 29cf629
+    Windows/Mac:
+      1.Docker desktop
+      2.WSL
+      3.Docker version 25.0.2, build 29cf629
+  GitHub Desktop/ git extension:
+      connected to git repository
 
 Starting:
   Using terminal:
-    being in the directory that contains the docker-compose.yml file, use the command: "docker compose up"
+    -being in the directory that contains the docker-compose.yml file, use the command "docker compose up"
   Docker desktop: 
     -tbd
 
@@ -17,3 +20,8 @@ Explanation of dependencies:
   - php env - php 7.4-apache 
   - datebase - mysql localhost:3306
   - database management - phpmyadmin localhost:8080
+
+Tips:
+  - extension "Docker" for visual studio code - introduces the ability to execute docker commands from the VS Code terminal
+  - to stop 
+  - after pulling repository from main branch, change branch to dedicaded
