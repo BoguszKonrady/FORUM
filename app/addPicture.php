@@ -35,13 +35,13 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-light menu">
-        <a class="navbar-brand" href="#"></a>
+        <a class="navbar-brand" href="#">#</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-            <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link" href="index.php">Strona główna</a>
                 </li>
                 <li class="nav-item">
@@ -61,29 +61,8 @@
     </nav>
 
     <div id="main-content" class="container mt-3">
-        <?php
-        include 'db.php';
-
-        try {
-            $stmt = $conn->prepare("SELECT title, content FROM posts"); // Zakładam, że tabela nazywa się 'posts' i ma kolumny 'title' oraz 'content'
-            $stmt->execute();
-
-            // Ustaw tryb pobierania na asocjacyjny
-            $stmt->setFetchMode(PDO::FETCH_ASSOC);
-            while ($row = $stmt->fetch()) {
-                echo "<div class='card mb-3'>
-                        <div class='card-body'>
-                            <h5 class='card-title'>{$row['title']}</h5>
-                            <p class='card-text'>{$row['content']}</p>
-                        </div>
-                      </div>";
-            }
-        } catch(PDOException $e) {
-            echo "Błąd: " . $e->getMessage();
-        }
-
-        $conn = null;
-        ?>
+        
+    
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
