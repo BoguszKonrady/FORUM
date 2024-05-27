@@ -1,0 +1,75 @@
+body {
+    overflow-x: hidden;
+}
+
+#main-content {
+    width: 60%;
+    margin: 0 auto;
+    max-height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.menu {
+    background-color: #ccc;
+}
+
+#main-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+#main-content::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+#main-content::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+.card-body .post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-user {
+    font-weight: bold;
+}
+
+.post-date {
+    color: #888;
+    font-size: 0.9em;
+}
+
+.post-description {
+    margin-top: 10px;
+}
+
+.post-actions {
+    display: flex;
+    align-items: center;
+}
+
+.post-reactions {
+    display: flex;
+    gap: 5px; 
+}
+
+.post-reactions .btn-share {
+    margin-left: auto; 
+}
+
+.post-reactions .btn-favorite {
+    margin-right: 5px; 
+}
+
+.comment-section {
+    margin-top: 10px;
+}
+
+.comment-section input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+}
