@@ -3,8 +3,7 @@ body {
 }
 
 #main-content {
-    width: 60%;
-    margin: 0 auto;
+    width: 75%;
     max-height: 100vh;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -72,4 +71,32 @@ body {
     width: 100%;
     padding: 5px;
     margin-top: 5px;
+}
+
+.search-form {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.search-form .form-control {
+    width: 100%;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.sidebar .btn {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
 }
