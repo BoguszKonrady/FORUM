@@ -44,12 +44,12 @@ function timeAgo($datetime, $full = false) {
 <body>
 
 <?php
-include './views/layout/loggedUserNavbar.php';
+include '/var/www/html/views/layout/loggedUserNavbar.php';
 ?>
 
 <div class="container-fluid">
     <?php
-        include './views/layout/leftBar.php';
+        include '/var/www/html/views/layout/leftBar.php';
     ?>
         <div class="col-md-8">
             <div id="main-content" class="container mt-3">

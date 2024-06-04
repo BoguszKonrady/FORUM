@@ -9,7 +9,7 @@
                 <a class="nav-link" href="/index.php">Strona główna <i class="fa-solid fa-house"></i></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/views/posts/favorites.php">Ulubione <i class="fa-solid fa-heart"></i></a>
+                <a class="nav-link" href="#">Ulubione <i class="fa-solid fa-heart"></i></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/views/user/editProfile.php">Mój profil <i class="fa-solid fa-user"></i></a>

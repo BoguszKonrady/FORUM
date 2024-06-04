@@ -44,7 +44,7 @@ function timeAgo($datetime, $full = false) {
 <body>
 
 <?php
-include './views/layout/loggedUserNavbar.php';
+include '/var/www/html/views/layout/loggedUserNavbar.php';
 ?>
 
 <div class="container-fluid">

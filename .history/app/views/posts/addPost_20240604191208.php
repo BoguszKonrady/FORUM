@@ -1,6 +1,6 @@
 <div class="card mb-3">
                     <div class="card-body">
-                        <form action="/controllers/posts/addPost.php" method="POST" enctype="multipart/form-data">
+                        <form action="controllers/posts/addPost.php" method="POST" enctype="multipart/form-data">
                             <div class="form-group">
                                 <textarea class="form-control" name="content" rows="3" placeholder="Co masz na myśli?"></textarea>
                             </div>

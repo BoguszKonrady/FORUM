@@ -54,7 +54,7 @@ include './views/layout/loggedUserNavbar.php';
         <div class="col-md-8">
             <div id="main-content" class="container mt-3">
                 <?php include './views/posts/addPost.php';?>
-                <?php include './views/posts/allPosts.php';?>
+                <?php include './controllers/posts/allPosts.php';?>
             </div>
         </div>
     </div>

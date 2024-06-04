@@ -1,34 +1,5 @@
 <?php
 session_start();
-
-function timeAgo($datetime, $full = false) {
-    $now = new DateTime;
-    $ago = new DateTime($datetime);
-    $diff = $now->diff($ago);
-
-    $diff->w = floor($diff->d / 7);
-    $diff->d -= $diff->w * 7;
-
-    $string = array(
-        'y' => 'rok',
-        'm' => 'miesiąc',
-        'w' => 'tydzień',
-        'd' => 'dni',
-        'h' => 'godzin',
-        'i' => 'minut',
-        's' => 'sekund',
-    );
-    foreach ($string as $k => &$v) {
-        if ($diff->$k) {
-            $v = $diff->$k . ' ' . $v;
-        } else {
-            unset($string[$k]);
-        }
-    }
-
-    if (!$full) $string = array_slice($string, 0, 1);
-    return $string ? implode(', ', $string) . ' temu' : 'przed chwilą';
-}
 ?>
 
 <!DOCTYPE html>
@@ -49,24 +20,13 @@ include '../layout/loggedUserNavbar.php';
 
 <div class="container-fluid">
     <?php
-        include '../layout/rightBar.php';
+        include '../layout/leftBar.php';
     ?>
         <div class="col-md-8">
             <div id="main-content" class="container mt-3">
                 <?php include '../posts/addPost.php';?>
                 <div class="posts-container">
-                <h2>Moje Posty</h2>
-                <hr>
-                <?php if (count($posts) > 0): ?>
-                    <?php foreach ($posts as $post): ?>
-                        <div class="post">
-                            <p><?php echo htmlspecialchars($post['content']); ?></p>
-                            <small><?php echo $post['created_at']; ?></small>
-                        </div>
-                    <?php endforeach; ?>
-                <?php else: ?>
-                    <p>Nie masz jeszcze żadnych postów.</p>
-                <?php endif; ?>
+                <?php include '/var/www/html/controllers/posts/userPosts.php' ?>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
