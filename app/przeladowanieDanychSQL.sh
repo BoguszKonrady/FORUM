@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Definiowanie zmiennych
-SQL_FILE="/mnt/c/Docker/Aplikacje-internetowe/posts.sql"
-CONTAINER_NAME="aplikacje-internetowe-db-1"
+SQL_FILE="/mnt/c/Docker/FORUM/database/mydatabase.sql"
+CONTAINER_NAME="forum-db-1"
 DB_NAME="mydatabase"
 DB_USER="root"
 
@@ -24,14 +24,14 @@ read -s DB_PASS
 echo
 
 # Skopiowanie pliku SQL do kontenera Docker
-docker cp "$SQL_FILE" "$CONTAINER_NAME:/posts.sql"
+docker cp "$SQL_FILE" "$CONTAINER_NAME:/mydatabase.sql"
 if [ $? -ne 0 ]; then
     echo "Nie udało się skopiować pliku SQL do kontenera Docker."
     exit 1
 fi
 
 # Ładowanie danych do bazy danych MySQL
-docker exec -i "$CONTAINER_NAME" bash -c "mysql -u $DB_USER -p$DB_PASS $DB_NAME < /posts.sql"
+docker exec -i "$CONTAINER_NAME" bash -c "mysql -u $DB_USER -p$DB_PASS $DB_NAME < /mydatabase.sql"
 if [ $? -ne 0 ]; then
     echo "Nie udało się załadować danych do bazy danych MySQL."
     exit 1
