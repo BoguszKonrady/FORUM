@@ -49,7 +49,7 @@ include '/var/www/html/controllers/user/profile.php';
     </div>
 </div>
 <footer class="footer mt-3">
-    <p>&copy; 2023 SocialApp. Wszelkie prawa zastrzeżone.</p>
+    <p>&copy; 2024 FriendSpace. Wszelkie prawa zastrzeżone.</p>
     <p><a href="#">O nas</a> | <a href="#">Pomoc</a> | <a href="#">Warunki</a> | <a href="#">Prywatność</a> | <a href="#">Ciasteczka</a> | <a href="#">Reklamy</a></p>
 </footer>
 
