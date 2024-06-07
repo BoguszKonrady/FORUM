@@ -1,0 +1,2 @@
+2024-06-07 16:46:41 - Image uploaded successfully. Path: resources/img/Zrzut ekranu 2024-06-05 214847.png
+2024-06-07 16:46:41 - Executing SQL statement: INSERT INTO posts (user_id, title, content, image_path, created_at) VALUES (:user_id, :title, :content, :image_path, NOW()) with user_id: 22, title: , content: post dodany w ramach zweryfikowania, image_path: resources/img/Zrzut ekranu 2024-06-05 214847.png

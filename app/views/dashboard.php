@@ -42,5 +42,33 @@ include '/var/www/html/controllers/user/loggedUser.php';
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function expandImage(src) {
+    // Tworzenie elementów modal
+    var modal = document.createElement("div");
+    modal.classList.add("modal");
+
+    var modalContent = document.createElement("img");
+    modalContent.classList.add("modal-content");
+    modalContent.src = src;
+
+    var closeBtn = document.createElement("span");
+    closeBtn.classList.add("close");
+    closeBtn.innerHTML = "&times;";
+    closeBtn.onclick = function() {
+        document.body.removeChild(modal);
+    };
+
+    // Dodanie elementów do modal
+    modal.appendChild(modalContent);
+    modal.appendChild(closeBtn);
+
+    // Dodanie modal do dokumentu
+    document.body.appendChild(modal);
+
+    // Wyświetlenie modal
+    modal.style.display = "block";
+}
+</script>
 </body>
 </html>

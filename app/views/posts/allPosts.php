@@ -16,7 +16,6 @@
         <?php
         include '/var/www/html/controllers/posts/allPosts.php'; ?>
         </div>
-        
     </div>
 </div>
 

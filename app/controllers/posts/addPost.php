@@ -75,8 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         logMessage("Executing SQL statement: $sql with user_id: " . $_SESSION['user_id'] . ", title: $postTitle, content: $postContent, image_path: $image_url");
 
         if ($stmt->execute()) {
-            logMessage("Post created successfully.");
-            echo "<script type='text/javascript'>alert('Post created successfully!'); window.location.href = '/views/dashboard.php';</script>";
+            $win=1+1;
         } else {
             logMessage("Error executing statement.");
             echo "Error occurred. Please try again later.";
