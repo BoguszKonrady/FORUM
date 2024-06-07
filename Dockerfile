@@ -23,15 +23,7 @@ RUN echo "allow_url_fopen = On" >> /usr/local/etc/php/php.ini
 
 # Skopiuj pliki aplikacji do katalogu /var/www/html w kontenerze
 COPY . /var/www/html
-COPY forum.com.conf /etc/apache2/sites-available/
-RUN chown -R www-data:www-data /var/www/html \ 
-    && chmod -R 755 /var/www/html
 
-RUN a2ensite forum.com
-# Wyłącz domyślny host
-RUN a2dissite 000-default.conf
-# Upewnij się, że mod_rewrite jest włączony
-RUN a2enmod rewrite
 # Instalacja Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
