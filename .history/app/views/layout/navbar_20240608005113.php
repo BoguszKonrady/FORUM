@@ -24,13 +24,13 @@
         <ul class="navbar-nav center">
             <!-- Elementy nawigacji -->
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/views/posts/userPosts.php">Posty</a>
+                <a class="nav-link active" aria-current="page" href="posts/userPosts.php">Posty</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/views/posts/favoritesPosts.php">Ulubione</a>
+                <a class="nav-link" href="/posts/favoritesPosts.php">Ulubione</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/views/friends/usersList.php">Użytkownicy</a>
+                <a class="nav-link" href="/friends/usersList.php">Użytkownicy</a>
             </li>
         </ul>
         <!-- Wyloguj na prawo -->
