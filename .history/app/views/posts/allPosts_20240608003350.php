@@ -11,7 +11,7 @@ include '/var/www/html/controllers/posts/allPosts.php';
     
 </head>
 <body>
-<input type="text" id="search" class="form-control" placeholder="Szukaj postów po treści..." >
+<input type="text" id="search" class="form-control" placeholder="Szukaj postów po treści...">
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-12">

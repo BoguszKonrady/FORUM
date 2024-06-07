@@ -11,8 +11,8 @@ include '/var/www/html/controllers/posts/allPosts.php';
     
 </head>
 <body>
-<input type="text" id="search" class="form-control" placeholder="Szukaj postów po treści..." >
 <div class="container mt-5">
+<input type="text" id="search" class="form-control" placeholder="Search posts...">
     <div class="row">
         <div class="col-md-12">
             <?php if (isset($posts) && count($posts) > 0): ?>
@@ -59,20 +59,6 @@ $(document).ready(function() {
             },
             error: function() {
                 alert('Error liking post');
-            }
-        });
-    });
-});
-
-$(document).ready(function() {
-    $('#search').on('input', function() {
-        var searchQuery = $(this).val().toLowerCase();
-        $('.post-card').each(function() {
-            var postContent = $(this).find('.card-text').text().toLowerCase();
-            if (postContent.includes(searchQuery)) {
-                $(this).show();
-            } else {
-                $(this).hide();
             }
         });
     });

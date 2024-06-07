@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $imageUrl = null;
 
     if (!empty($_FILES["postImage"]["name"])) {
-        $targetDir = "/var/www/html/resources/";
+        $targetDir = "/var/www/html/uploads/";
         $targetFile = $targetDir . basename($_FILES["postImage"]["name"]);
         $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
 

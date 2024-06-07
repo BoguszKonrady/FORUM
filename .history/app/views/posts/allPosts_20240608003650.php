@@ -11,9 +11,9 @@ include '/var/www/html/controllers/posts/allPosts.php';
     
 </head>
 <body>
-<input type="text" id="search" class="form-control" placeholder="Szukaj postów po treści..." >
 <div class="container mt-5">
     <div class="row">
+    <input type="text" id="search" class="form-control" placeholder="Szukaj postów po treści..." >
         <div class="col-md-12">
             <?php if (isset($posts) && count($posts) > 0): ?>
                 <?php foreach ($posts as $post): ?>
