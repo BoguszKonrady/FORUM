@@ -2,7 +2,7 @@
     <div class="card">
         <div class="card-body">
                 <div class="cover-photo">
-                    <img src="../resources/cover-img/cover-photo.jpg" alt="Cover Photo">
+                    <img src="../resources/cover-img/background.jpg" alt="Cover Photo">
                 </div>
                 <div class="profile-picture-container">
                     <div class="profile-picture">

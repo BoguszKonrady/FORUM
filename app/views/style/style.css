@@ -49,9 +49,10 @@ body {
 }/*Zdjęcie w tle */
 .cover-photo {
     position: relative;
-    width: 100%;
-    height: 150px; /* Wysokość zdjęcia okładkowego */
+    width: auto;
+    height: 200px; /* Wysokość zdjęcia okładkowego */
     overflow: hidden;
+    border: 1px solid #c0c0c0;
     
 }
 
@@ -64,16 +65,18 @@ body {
 /* Zdjęcie główne */
 .profile-picture-container {
     position: relative;
-    margin-top: -30%; /* Przesunięcie profilu na zdjęcie okładkowe */
+    margin-top: -70px; /* Przesunięcie profilu na zdjęcie okładkowe */
     text-align: center;
     border:0px !important;
 }
 
 .profile-picture {
-    width: 100px; /* Rozmiar zdjęcia profilowego */
-    height: 100px;
+    width: 130px; /* Rozmiar zdjęcia profilowego */
+    height: 130px;
     overflow: hidden;
     display: inline-block;
+    border-radius: 50%;
+    border: 1px solid #c0c0c0;
 }
 
 .profile-picture img {
@@ -112,6 +115,7 @@ p.card-text
     margin: 0;
     padding-left: 60px;
     text-align: center;
+    width: 30% !important;
 }
 .container-fluid
 {
@@ -203,8 +207,19 @@ html, body {
     padding: 20px !important;
     margin-left: auto; 
     margin-right: auto; 
+    text-align: right;
 }
-.row-mt-3, .col-md-6
+.row-mt-3
+{
+    width:100% !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    position:flex;
+
+}
+.col-md-6
 {
     width:100% !important;
     padding-left: 0px !important;
@@ -303,4 +318,59 @@ html, body {
     width: 100%;
     height: 100%;
     border-radius: 10px;
+}
+.thumbs-up
+{
+    background-color: rgb(76, 199, 76);
+    text-align: center;
+    width:40px;
+    height:40px;
+    margin: 5px;
+    padding:5px;
+    color:white;
+    font-size: larger;
+    border: none;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.thumbs-down
+{
+    background-color: rgb(202, 47, 47);
+    text-align: center;
+    width:40px;
+    height:40px;
+    margin: 5px;
+    padding:5px;
+    color:white;
+    font-size: larger;
+    border: none;
+    box-shadow: 1 8px 7px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.share-btn
+{
+    background-color: rgb(6, 120, 214);
+    text-align: center;
+    width:70px;
+    height:40px;
+    margin: 5px;
+    padding:5px;
+    color:white;
+    font-size: larger;
+    border: none;
+    box-shadow: 1 8px 7px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.thumbnail {
+    width: 60px; /* Szerokość miniatury */
+    height: 60px; /* Wysokość miniatury */
+    overflow: hidden; /* Ukryj część obrazu, która wychodzi poza kontener */
+    border-radius: 50%; /* Zaokrągl krawędzie, aby uzyskać efekt okrągłej miniatury */
+    float: left; /* Pozycjonowanie obrazu na lewo */
+    margin-right: 10px; /* Dodaj margines z prawej strony, aby oddzielić miniaturę od treści */
+    border: 1px solid #c0c0c0;
+}
+
+.thumbnail img {
+    width: 100%; /* Ustaw szerokość obrazu na 100% kontenera */
+    height: 100%; /* Ustaw wysokość obrazu automatycznie, aby zachować proporcje */
+    border-radius: 50%; /* Ponownie zaokrągl krawędzie obrazu, aby pasowały do kontenera */
+    border: 1px solid #c0c0c0;
 }
