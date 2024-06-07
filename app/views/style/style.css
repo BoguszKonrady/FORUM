@@ -1,8 +1,10 @@
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f0f2f5 !important;
     margin: 0;
     padding: 0;
+   
 }
 .nav-link {
     color: #fff !important;
@@ -52,7 +54,7 @@ body {
     width: auto;
     height: 200px; /* Wysokość zdjęcia okładkowego */
     overflow: hidden;
-    border: 1px solid #c0c0c0;
+    border: 0px solid #c0c0c0;
     
 }
 
@@ -71,8 +73,8 @@ body {
 }
 
 .profile-picture {
-    width: 130px; /* Rozmiar zdjęcia profilowego */
-    height: 130px;
+    width: 160px !important; /* Rozmiar zdjęcia profilowego */
+    height: 160px !important;
     overflow: hidden;
     display: inline-block;
     border-radius: 50%;
@@ -234,7 +236,7 @@ html, body {
     background-color: #fff !important;
     border-radius: 20px !important;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24) !important;
-    margin: 10px !important;
+    margin-bottom: 15px !important;
     padding: 20px !important;
     width:100%;
     
@@ -374,3 +376,62 @@ html, body {
     border-radius: 50%; /* Ponownie zaokrągl krawędzie obrazu, aby pasowały do kontenera */
     border: 1px solid #c0c0c0;
 }
+
+.logo{
+    width: 74px;
+    height: auto;
+    margin-left: 10px;
+}
+.nav-item{
+
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: left;
+    font-size:larger;
+}
+navbar-toggler
+{
+    color:black !important;
+    width: 50px !important;
+    height:50px !important;
+
+}
+.friends-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.friend-thumbnail {
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.friend-thumbnail:hover {
+    transform: scale(1.1);
+}
+
+.friend-thumbnail img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    transition: border-color 0.2s;
+}
+
+.friend-thumbnail img:hover {
+    border-color: #007bff;
+}
+
+.friend-thumbnail h5 {
+    margin-top: 10px;
+    font-size: 14px;
+}
+

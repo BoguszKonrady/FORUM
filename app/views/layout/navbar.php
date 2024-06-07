@@ -13,11 +13,10 @@
     <div class="container-fluid">
         <!-- Zdjęcie z logo -->
         <a class="navbar-brand" href="/views/dashboard.php">
-            <img src="" alt="Logo" class="logo">
+            <img src="../../resources/img/logo.png" alt="Logo" class="logo">
         </a>
         <!-- Przycisk hamburgera -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
         </button>
     </div>
     <div class="collapse navbar-collapse" id="navbarNav">

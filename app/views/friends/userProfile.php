@@ -47,8 +47,10 @@
 <?php include '/var/www/html/views/layout/navbar.php'; ?>
 <div class="container mt-5">
     <div class="profile-header">
-        <div class="cover"></div>
-        <img src="<?php echo htmlspecialchars($user['avatar_url']); ?>" class="avatar" alt="User Avatar">
+        <div class="cover">
+            <img width="400px" height="100px" src="http://localhost:8080/resources/cover-img/cover-photo.jpg">
+        </div>
+        <img src="http://localhost:8080/<?php echo htmlspecialchars($user['avatar_url']); ?>" class="avatar" alt="User Avatar">
     </div>
     <div class="profile-info">
         <div class="row">

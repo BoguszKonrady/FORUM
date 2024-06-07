@@ -1,2 +1,15 @@
 2024-06-07 16:46:41 - Image uploaded successfully. Path: resources/img/Zrzut ekranu 2024-06-05 214847.png
 2024-06-07 16:46:41 - Executing SQL statement: INSERT INTO posts (user_id, title, content, image_path, created_at) VALUES (:user_id, :title, :content, :image_path, NOW()) with user_id: 22, title: , content: post dodany w ramach zweryfikowania, image_path: resources/img/Zrzut ekranu 2024-06-05 214847.png
+2024-06-07 18:34:19 - File already exists: /var/www/html/resources/img/screen.png
+2024-06-07 18:34:33 - Image uploaded successfully. Path: resources/img/Zrzut ekranu 2023-12-16 110528.png
+2024-06-07 18:34:33 - Executing SQL statement: INSERT INTO posts (user_id, title, content, image_path, created_at) VALUES (:user_id, :title, :content, :image_path, NOW()) with user_id: 22, title: , content: dadwagfwe, image_path: resources/img/Zrzut ekranu 2023-12-16 110528.png
+2024-06-07 18:52:28 - Image uploaded successfully. Path: resources/img/screen231.png
+2024-06-07 18:52:28 - Executing SQL statement: INSERT INTO posts (user_id, title, content, image_path, created_at) VALUES (:user_id, :title, :content, :image_path, NOW()) with user_id: 22, title: , content: Ctesdmvsdkxmvkew MDKWAMKDFw mklevMKLMVFklenkls
+feslgposkaopgopawespgawsgszf \ewasfvweasgweagweGWCtesdmvsdkxmvkew MDKWAMKDFw mklevMKLMVFklenkls
+feslgposkaopgopawespgawsgszf \ewasfvweasgweagweGWCtesdmvsdkxmvkew MDKWAMKDFw mklevMKLMVFklenkls
+feslgposkaopgopawespgawsgszf \ewasfvweasgweagweGWCtesdmvsdkxmvkew MDKWAMKDFw mklevMKLMVFklenkls
+feslgposkaopgopawespgawsgszf \ewasfvweasgweagweGWCtesdmvsdkxmvkew MDKWAMKDFw mklevMKLMVFklenkls
+feslgposkaopgopawespgawsgszf \ewasfvweasgweagweGW, image_path: resources/img/screen231.png
+2024-06-07 19:50:26 - File already exists: /var/www/html/resources/img/screen231.png
+2024-06-07 19:50:49 - Image uploaded successfully. Path: resources/img/screen2452.png
+2024-06-07 19:50:49 - Executing SQL statement: INSERT INTO posts (user_id, title, content, image_path, created_at) VALUES (:user_id, :title, :content, :image_path, NOW()) with user_id: 22, title: , content: wysylka do ten tego, image_path: resources/img/screen2452.png

@@ -22,7 +22,7 @@ include '/var/www/html/controllers/user/loggedUser.php';
         </div>
         
         <div class="col-md-6">
-            <h5>Dodaj Post</h5>
+            <br>
             <?php include '/var/www/html/views/posts/addPost.php'; ?>
             <h5>Wszystkie Posty</h5>
             <?php include '/var/www/html/views/posts/allPosts.php'; ?>
