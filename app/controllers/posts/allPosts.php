@@ -10,7 +10,7 @@ if (!isset($_SESSION['user_id'])) {
 $user_id = $_SESSION['user_id'];
 
 try {
-    $sql = "SELECT p.id, p.content, p.created_at, u.username 
+    $sql = "SELECT p.id, p.content, p.created_at, p.image_path, u.username 
             FROM posts p 
             JOIN users u ON p.user_id = u.id 
             ORDER BY p.created_at DESC";
@@ -21,3 +21,14 @@ try {
     echo "Error: " . $e->getMessage();
     exit();
 }
+
+foreach ($posts as $post) {
+    echo "<div class='post'>";
+    echo "<p><strong>{$post['username']}</strong> - {$post['created_at']}</p>";
+    echo "<p>{$post['content']}</p>";
+    if ($post['image_path']) {
+        echo "<img src='{$post['image_path']}' alt='Post Image'>";
+    }
+    echo "</div>";
+}
+?>

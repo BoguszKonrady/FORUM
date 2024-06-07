@@ -5,48 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facebook Style Navbar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .navbar-facebook {
-            background-color: #3b5998;
-        }
-        .navbar-facebook .navbar-brand, 
-        .navbar-facebook .nav-link,
-        .navbar-facebook .form-control {
-            color: #fff;
-        }
-        .navbar-facebook .form-control {
-            background-color: rgba(255, 255, 255, 0.2);
-            border: none;
-        }
-        .navbar-facebook .form-control::placeholder {
-            color: rgba(255, 255, 255, 0.6);
-        }
-    </style>
+    <link rel="stylesheet" href="style/style-nav.css">
+   
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-facebook">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">BrandName</a>
+        <!-- Zdjęcie z logo -->
+        <a class="navbar-brand" href="#">
+            <img src="path/to/logo.jpg" alt="Logo" class="logo">
+        </a>
+        <!-- Przycisk hamburgera -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
     </div>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="posts/userPosts.php">Posty</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="posts/favoritesPosts.php">Ulubione</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="user/profile.php">Profil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Wyloguj</a>
-                </li>
-            </ul>
-        </div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav center">
+            <!-- Elementy nawigacji -->
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="posts/userPosts.php">Posty</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="posts/favoritesPosts.php">Ulubione</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Znajomi</a>
+            </li>
+        </ul>
+        <!-- Wyloguj na prawo -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Wyloguj</a>
+            </li>
+        </ul>
+    </div>
 </nav>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

@@ -30,37 +30,7 @@ try {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forum matrymonialne</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f0f2f5;
-        }
-        .nav-link {
-            color: #fff !important;
-        }
-        .sidebar, .content, .right-sidebar {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-            margin: 0px;
-            padding: 10px;
-        }
-        .card {
-            margin-bottom: 20px;
-        }
-        .card img {
-            max-width: 100%;
-            border-radius: 8px;
-        }
-        .footer {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-            margin: 20px;
-            padding: 20px;
-            text-align: center;
-        }
-    </style>
+   
 </head>
 <body>
 <?php 

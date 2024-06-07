@@ -1,0 +1,31 @@
+
+.navbar-facebook {
+     background-color: #f0f2f5;
+     border-bottom: 0.5px solid rgb(201, 201, 225);
+}
+.navbar-facebook .navbar-brand, 
+.navbar-facebook .nav-link,
+.navbar-facebook .form-control {
+    color: black;
+}
+.navbar-facebook .form-control {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-bottom: 0.5px solid rgb(201, 201, 225);
+}
+.navbar-facebook .form-control::placeholder {
+    color: rgb(0, 0, 0);
+    
+}
+.navbar-facebook a
+{
+    font-size: medium;
+    font-weight: 600;
+}
+a.nav-link
+{
+    color:rgb(101, 97, 97) !important;
+    text-decoration:none;
+    font-size: medium;
+    font-family: "Times New Roman";
+    font-weight: 400;
+}d
