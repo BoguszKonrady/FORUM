@@ -34,14 +34,12 @@ include '/var/www/html/controllers/user/loggedUser.php';
     </div>
 </div>
 
-<footer class="footer mt-3">
-    <p>&copy; 2023 SocialApp. Wszelkie prawa zastrzeżone.</p>
-    <p><a href="#">O nas</a> | <a href="#">Pomoc</a> | <a href="#">Warunki</a> | <a href="#">Prywatność</a> | <a href="#">Ciasteczka</a> | <a href="#">Reklamy</a></p>
-</footer>
-<!--<script src="/scripts/buttonHover.js"></script>-->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<?php
+include '/var/www/html/views/layout/footer.php';
+?>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 <script>
     function expandImage(src) {
     // Tworzenie elementów modal

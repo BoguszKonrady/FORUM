@@ -71,7 +71,6 @@
                     <div class="card-body">
                         <h5 class="card-title">Informacje o profilu</h5>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><strong>Imię i nazwisko:</strong> <?php echo htmlspecialchars($user['first_name'] . ' ' . $user['last_name']); ?></li>
                             <li class="list-group-item"><strong>Nazwa użytkownika:</strong> <?php echo htmlspecialchars($user['username']); ?></li>
                             <li class="list-group-item"><strong>Email:</strong> <?php echo htmlspecialchars($user['email']); ?></li>
                             <li class="list-group-item"><strong>Data dołączenia:</strong> <?php echo htmlspecialchars($user['created_at']); ?></li>
@@ -106,11 +105,9 @@
     </div>
 </div>
 
-<footer class="footer mt-5">
-    <p>&copy; 2023 SocialApp. Wszelkie prawa zastrzeżone.</p>
-    <p><a href="#">O nas</a> | <a href="#">Pomoc</a> | <a href="#">Warunki</a> | <a href="#">Prywatność</a> | <a href="#">Ciasteczka</a> | <a href="#">Reklamy</a></p>
-</footer>
-
+<?php
+include '/var/www/html/views/layout/footer.php';
+?>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
