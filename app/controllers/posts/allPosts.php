@@ -27,7 +27,7 @@ foreach ($posts as $post) {
     echo "<p><strong>{$post['username']}</strong> - {$post['created_at']}</p>";
     echo "<p>{$post['content']}</p>";
     if ($post['image_path']) {
-        echo "<img src='{$post['image_path']}' alt='Post Image'>";
+        echo "<img class='img_posts' src='http://localhost:8080/{$post['image_path']}' alt='Post Image'>";
     }
     echo "</div>";
 }

@@ -15,21 +15,8 @@
         <div class="col-md-6">
         <?php
         include '/var/www/html/controllers/posts/allPosts.php';
-        foreach ($posts as $post): ?>
-                    <div class="post-card">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo htmlspecialchars($post['username']); ?></h5>
-                            <p class="card-text"><?php echo htmlspecialchars($post['content']); ?></p>
-                            <p class="card-text"><small class="text-muted"><?php echo $post['created_at']; ?></small></p>
-                            <button class="btn btn-primary add-to-favorite" data-post-id="<?php echo $post['id']; ?>">Lubie to</button>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
-                <?php if (empty($posts)): ?>
-                    <p class="text-center">Nie mas postów.</p>
-                <?php endif; ?>
+        ?>
         </div>
-        
     </div>
 </div>
 

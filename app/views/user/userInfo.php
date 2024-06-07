@@ -6,7 +6,7 @@
                 </div>
                 <div class="profile-picture-container">
                     <div class="profile-picture">
-                        <img src="../resources/profile-img/profile.jpg" alt="Profile Picture">
+                    <img src="../resources/profile-img/profile.jpg" alt="Profile Picture" onclick="expandImage('../resources/profile-img/profile.jpg')">
                     </div>
                 </div>
                 <h2><?php echo htmlspecialchars($user['username']); ?></h2>
