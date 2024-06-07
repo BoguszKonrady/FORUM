@@ -20,7 +20,8 @@ if (isset($_GET['user_id'])) {
             $stmt->bindParam(':currentUserId', $currentUserId, PDO::PARAM_INT);
             $stmt->bindParam(':friendId', $friendId, PDO::PARAM_INT);
             $stmt->execute();
-            echo "<script type='text/javascript'>alert('Zaobserwoałeś użytkownika!'); window.location.href = '/views/dashboard.php';</script>";
+            $response['status'] = 'success';
+            $response['message'] = 'Dodano do znajomych!';
         } else {
             $response['status'] = 'error';
             $response['message'] = 'Ten użytkownik jest już Twoim znajomym.';

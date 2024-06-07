@@ -15,32 +15,33 @@ include '/var/www/html/controllers/user/loggedUser.php';
 <?php include '/var/www/html/views/layout/navbar.php'; ?>
 
 <div class="container-fluid">
-    <?php include '/var/www/html/controllers/friends/usersList.php'; ?>
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-12">
-                <h2>Lista Użytkowników</h2>
-                <div id="message"></div>
-                <?php foreach ($friends as $row): ?>
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo htmlspecialchars($row['username']); ?></h5>
-                            <?php if ($row['friend_id']): ?>
-                                <a href="#" class="btn btn-danger remove-friend" data-user-id="<?php echo $row['id']; ?>">Usuń ze znajomych</a>
-                            <?php else: ?>
-                                <a href="#" class="btn btn-primary add-friend" data-user-id="<?php echo $row['id']; ?>">Dodaj do znajomych</a>
-                            <?php endif; ?>
-                        </div>
+<?php include '/var/www/html/controllers/friends/usersList.php'; ?>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Lista Użytkowników</h2>
+            <div id="message"></div>
+            <?php foreach ($friends as $row): ?>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo htmlspecialchars($row['username']); ?></h5>
+                        <?php if ($row['friend_id']): ?>
+                            <a href="#" class="btn btn-danger remove-friend" data-user-id="<?php echo $row['id']; ?>">Usuń ze znajomych</a>
+                        <?php else: ?>
+                            <a href="#" class="btn btn-primary add-friend" data-user-id="<?php echo $row['id']; ?>">Dodaj do znajomych</a>
+                        <?php endif; ?>
                     </div>
-                <?php endforeach; ?>
-            </div>
+                </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </div>
 </div>
-<?php
-include '/var/www/html/views/layout/footer.php';
-?>
+
+<footer class="footer mt-3">
+    <p>&copy; 2023 SocialApp. Wszelkie prawa zastrzeżone.</p>
+    <p><a href="#">O nas</a> | <a href="#">Pomoc</a> | <a href="#">Warunki</a> | <a href="#">Prywatność</a> | <a href="#">Ciasteczka</a> | <a href="#">Reklamy</a></p>
+</footer>
 <!--<script src="/scripts/buttonHover.js"></script>-->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
