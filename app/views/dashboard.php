@@ -6,12 +6,11 @@ include '/var/www/html/controllers/user/loggedUser.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FriendSpace </title>
+    <title>FriendSpace</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-    
+    <link rel="icon" href="http://localhost:8080/resources/img/logo.png" type="image/png">
 </head>
 <body>
 <?php include '/var/www/html/views/layout/navbar.php'; ?>
@@ -43,31 +42,31 @@ include '/var/www/html/views/layout/footer.php';
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 <script>
     function expandImage(src) {
-    // Tworzenie elementów modal
-    var modal = document.createElement("div");
-    modal.classList.add("modal");
+        // Tworzenie elementów modal
+        var modal = document.createElement("div");
+        modal.classList.add("modal");
 
-    var modalContent = document.createElement("img");
-    modalContent.classList.add("modal-content");
-    modalContent.src = src;
+        var modalContent = document.createElement("img");
+        modalContent.classList.add("modal-content");
+        modalContent.src = src;
 
-    var closeBtn = document.createElement("span");
-    closeBtn.classList.add("close");
-    closeBtn.innerHTML = "&times;";
-    closeBtn.onclick = function() {
-        document.body.removeChild(modal);
-    };
+        var closeBtn = document.createElement("span");
+        closeBtn.classList.add("close");
+        closeBtn.innerHTML = "&times;";
+        closeBtn.onclick = function() {
+            document.body.removeChild(modal);
+        };
 
-    // Dodanie elementów do modal
-    modal.appendChild(modalContent);
-    modal.appendChild(closeBtn);
+        // Dodanie elementów do modal
+        modal.appendChild(modalContent);
+        modal.appendChild(closeBtn);
 
-    // Dodanie modal do dokumentu
-    document.body.appendChild(modal);
+        // Dodanie modal do dokumentu
+        document.body.appendChild(modal);
 
-    // Wyświetlenie modal
-    modal.style.display = "block";
-}
+        // Wyświetlenie modal
+        modal.style.display = "block";
+    }
 </script>
 </body>
 </html>
