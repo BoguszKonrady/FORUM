@@ -1,5 +1,5 @@
 <div class="post-composer mb-3">
-    <form action="/controllers/posts/addPost.php" method="post" enctype="multipart/form-data">
+    <form action="/controllers/posts/addPost.php" method="post" enctype="multipart/form-data" class="formularz">
         <div class="mb-3">
             <textarea name="postContent" class="form-control" placeholder="Co słychać?" required rows="5" cols="50"></textarea>
         </div>

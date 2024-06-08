@@ -15,5 +15,17 @@ try {
     echo "Błąd: " . $e->getMessage();
     $posts = [];
 }
+foreach ($posts as $post) {
+    echo "<div class='post'>";
+    echo "<div class='.thumbnail'><p><img class='thumbnail img' src='../resources/profile-img/profile.jpg' alt='Post Image'></div><strong>{$post['username']}</strong> - {$post['created_at']}</p>";
+    echo "<p>{$post['content']}</p>";
+    if ($post['image_path']) {
+        echo "<img class='img_posts' src='http://localhost:8080/{$post['image_path']}' alt='Post Image'>";
+        echo "<button class='like-button' data-post-id='{$post['id']}'></button>";
+        echo "<span class='like-count'>$post[like_count] Liczba polubień</span>";
+        //echo "<button class='share-btn'>Share</button>";
+    }
+    echo "</div>";
+}
 
 $conn = null;

@@ -21,16 +21,15 @@ include '/var/www/html/views/layout/navbar.php'; ?>
             <h2 class="mb-4">Twoje posty</h2>
             <?php if (count($posts) > 0): ?>
                 <?php foreach ($posts as $post): ?>
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <p class="card-text"><?php echo htmlspecialchars($post['content']); ?></p>
-                            <?php if ($post['image_url']): ?>
-                                <img src="<?php echo htmlspecialchars($post['image_url']); ?>" alt="Post Image" class="img-fluid mt-2">
+                        <div class="post">
+                            <p ><?php echo htmlspecialchars($post['content']); ?></p>
+                            
+                            <?php if ($post['image_path']): ?>
+                                <img class='img_posts' src="http://localhost:8080/<?php echo htmlspecialchars($post['image_path'])?>" alt="Post Image" class="img-fluid mt-2">
                             <?php endif; ?>
-                            <p class="card-text"><small class="text-muted">Dodano: <?php echo htmlspecialchars($post['created_at']); ?></small></p>
+                            <p><small class="text-muted">Dodano: <?php echo htmlspecialchars($post['created_at']); ?></small></p>
                             <a href="editPost.php?id=<?php echo $post['id']; ?>" class="btn btn-primary">Edytuj</a>
                         </div>
-                    </div>
                 <?php endforeach; ?>
             <?php else: ?>
                 <p class="text-center">Nie masz jeszcze żadnych postów.</p>

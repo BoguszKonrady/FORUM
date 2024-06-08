@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $imageUrl = null;
 
     if (!empty($_FILES["postImage"]["name"])) {
-        $targetDir = "/var/www/html/uploads/";
+        $targetDir = "/var/www/html/resources/img/";
         $targetFile = $targetDir . basename($_FILES["postImage"]["name"]);
         $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
 
@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         if (move_uploaded_file($_FILES["postImage"]["tmp_name"], $targetFile)) {
-            $imageUrl = '/uploads/' . basename($_FILES["postImage"]["name"]);
+            $image_url = 'resources/img/' . basename($_FILES["postImage"]["name"]);
         } else {
             echo "Sorry, there was an error uploading your file.";
             exit();
@@ -47,14 +47,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     try {
-        $sql = "INSERT INTO posts (user_id, content, image_path, created_at) VALUES (:user_id, :content, :image_path, NOW())";
+        $sql = "INSERT INTO posts (user_id, title, content, image_path, created_at) VALUES (:user_id, :title, :content, :image_path, NOW())";
         $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':user_id', $userId, PDO::PARAM_INT);
+        $stmt->bindParam(':user_id', $_SESSION['user_id'], PDO::PARAM_INT);
+        $stmt->bindParam(':title', $postTitle, PDO::PARAM_STR); // Dodano przypisanie tytułu posta
         $stmt->bindParam(':content', $postContent, PDO::PARAM_STR);
-        $stmt->bindParam(':image_path', $imageUrl, PDO::PARAM_STR);
+        $stmt->bindParam(':image_path', $image_url, PDO::PARAM_STR);
+
 
         if ($stmt->execute()) {
-            echo "<script type='text/javascript'>alert('Dodano post!'); window.location.href = '/views/dashboard.php';</script>";
+            echo "<script type='text/javascript'>window.location.href = '/views/dashboard.php';</script>";
         } else {
             echo "Error occurred. Please try again later.";
         }
