@@ -9,6 +9,8 @@ include '/var/www/html/controllers/user/loggedUser.php';
     <title>FriendSpace</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="icon" href="http://localhost:8080/resources/img/logo.png" type="image/png">
     <style>
         #searchResults {
             position: absolute;
@@ -87,16 +89,16 @@ function expandImage(src) {
     var modal = document.createElement("div");
     modal.classList.add("modal");
 
-    var modalContent = document.createElement("img");
-    modalContent.classList.add("modal-content");
-    modalContent.src = src;
+        var modalContent = document.createElement("img");
+        modalContent.classList.add("modal-content");
+        modalContent.src = src;
 
-    var closeBtn = document.createElement("span");
-    closeBtn.classList.add("close");
-    closeBtn.innerHTML = "&times;";
-    closeBtn.onclick = function() {
-        document.body.removeChild(modal);
-    };
+        var closeBtn = document.createElement("span");
+        closeBtn.classList.add("close");
+        closeBtn.innerHTML = "&times;";
+        closeBtn.onclick = function() {
+            document.body.removeChild(modal);
+        };
 
     modal.appendChild(modalContent);
     modal.appendChild(closeBtn);
