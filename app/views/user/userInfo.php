@@ -28,10 +28,10 @@
                 </div>
                 <div>
                     <div class="button-container">
-                        <a href="user/profile.php"><button class="custom-button">Profil</button></a>
-                        <a href="friends/friends.php"><button class="custom-button">Znajomi</button></a>
-                        <a href="posts/userPosts.php"><button class="custom-button">Moje posty</button></a>
-                        <a href="user/settings.php"><button class="custom-button">Ustawienia konta</button></a>
+                        <a href="user/profile.php"><button class="custom-button"><i class="fa-solid fa-user"></i> Profil</button></a>
+                        <a href="friends/friends.php"><button class="custom-button"><i class="fa-solid fa-user-group"></i> Znajomi</button></a>
+                        <a href="posts/userPosts.php"><button class="custom-button"><i class="fa-solid fa-newspaper"></i> Moje posty</button></a>
+                        <a href="user/settings.php"><button class="custom-button"><i class="fa-solid fa-gear"></i> Ustawienia konta</button></a>
                     </div>
                 </div>
 </div>

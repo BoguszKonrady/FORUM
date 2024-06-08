@@ -14,8 +14,40 @@
             height: 100vh;
             margin: 0;
             font-family: 'Arial', sans-serif;
+            overflow: hidden;
         }
-        .registration-form {
+
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: transparent;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 
+                0 0 2px white,
+                0 0 4px white,
+                0 0 8px white;
+            animation: fall 10s linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+
+        .register-form {
             background: #ffffff;
             padding: 30px;
             border-radius: 15px;
@@ -23,8 +55,10 @@
             max-width: 400px;
             width: 100%;
             text-align: center;
+            position: relative;
+            z-index: 1;
         }
-        .registration-form h2 {
+        .register-form h2 {
             margin-bottom: 20px;
             font-weight: bold;
             color: #182848;
@@ -58,21 +92,22 @@
         .btn-primary:hover {
             background: #3a4c8b;
         }
-        .registration-form p {
+        .register-form p {
             margin-top: 20px;
             color: #666;
         }
-        .registration-form a {
+        .register-form a {
             color: #4b6cb7;
             text-decoration: none;
         }
-        .registration-form a:hover {
+        .register-form a:hover {
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
-<div class="registration-form">
+<div class="stars"></div>
+<div class="register-form">
     <h2>Zarejestruj się</h2>
     <form action="/controllers/register/register.php" method="POST">
         <div class="form-group">
@@ -88,14 +123,26 @@
             <input type="password" class="form-control" id="password" name="password" required>
         </div>
         <button type="submit" class="btn btn-primary btn-block">Zarejestruj się</button>
+        <p>Masz już konto? <a href="/views/login.php">Zaloguj się</a></p>
     </form>
-    <div class="form-group mt-3">
-        <p>Masz konto? <a href="/index.php">Zaloguj się</a></p>
-    </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function createStars() {
+        const starContainer = document.querySelector('.stars');
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = `${Math.random() * 100}vw`;
+            star.style.top = `${Math.random() * -100}vh`;
+            star.style.animationDuration = `${Math.random() * 5 + 5}s`;
+            starContainer.appendChild(star);
+        }
+    }
+    createStars();
+</script>
 </body>
 </html>

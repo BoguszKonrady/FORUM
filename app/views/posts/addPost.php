@@ -6,6 +6,6 @@
         <div class="mb-3">
             <input type="file" name="postImage" class="form-control">
         </div>
-        <button type="submit" class="btn btn-primary">Dodaj post</button>
+        <button type="submit" class="btn btn-primary">Dodaj post <i class="fa-solid fa-paper-plane"></i></button>
     </form>
 </div>
