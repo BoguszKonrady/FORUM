@@ -14,7 +14,39 @@
             height: 100vh;
             margin: 0;
             font-family: 'Arial', sans-serif;
+            overflow: hidden;
         }
+
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: transparent;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 
+                0 0 2px white,
+                0 0 4px white,
+                0 0 8px white;
+            animation: fall 10s linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+
         .login-form {
             background: #ffffff;
             padding: 30px;
@@ -23,6 +55,8 @@
             max-width: 400px;
             width: 100%;
             text-align: center;
+            position: relative;
+            z-index: 1;
         }
         .login-form h2 {
             margin-bottom: 20px;
@@ -72,6 +106,7 @@
     </style>
 </head>
 <body>
+<div class="stars"></div>
 <div class="login-form">
     <h2>Zaloguj się</h2>
     <form action="/controllers/register/login.php" method="POST">
@@ -91,5 +126,19 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function createStars() {
+        const starContainer = document.querySelector('.stars');
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = `${Math.random() * 100}vw`;
+            star.style.top = `${Math.random() * -100}vh`;
+            star.style.animationDuration = `${Math.random() * 5 + 5}s`;
+            starContainer.appendChild(star);
+        }
+    }
+    createStars();
+</script>
 </body>
 </html>

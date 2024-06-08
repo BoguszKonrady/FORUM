@@ -11,7 +11,7 @@ include '/var/www/html/controllers/posts/allPosts.php';
     
 </head>
 <body>
-<input type="text" id="search" class="form-control" placeholder="Szukaj postów po treści..." >
+<input type="text" id="search" class="form-control w-50" placeholder="Szukaj postów po treści..." rows="10">
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-12">
@@ -25,7 +25,7 @@ include '/var/www/html/controllers/posts/allPosts.php';
                                 <img src="<?php echo htmlspecialchars($post['image_url']); ?>" alt="Post Image" class="img-fluid mt-2">
                             <?php endif; ?>
                             <p class="card-text"><small class="text-muted"><?php echo $post['created_at']; ?></small></p>
-                            <button class="btn btn-primary like-button" data-post-id="<?php echo $post['id']; ?>"><i class="fa-solid fa-thumbs-up"></i> Polub</button>
+                            <button class="btn btn-primary like-button" data-post-id="<?php echo $post['id']; ?>">Polub</button>
                             <span class="like-count"><?php echo $post['like_count']; ?> Liczba polubień</span>
                         </div>
                     </div>

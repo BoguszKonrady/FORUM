@@ -11,8 +11,14 @@ include '/var/www/html/controllers/posts/allPosts.php';
     
 </head>
 <body>
-<input type="text" id="search" class="form-control" placeholder="Szukaj postów po treści..." >
 <div class="container mt-5">
+    <div class="search-container">
+        <input type="text" id="search" class="form-control search-input" placeholder="Wyszukaj posty...">
+        <span class="search-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001a1 1 0 0 0 .003 1.415l3.852 3.85a1 1 0 0 0 1.415-.002l.003-.003a1 1 0 0 0-.002-1.414l-3.852-3.85a1 1 0 0 0-1.414-.002l-.003.002zm-5.26-7.282a5.5 5.5 0 1 1 0 7.778 5.5 5.5 0 0 1 0-7.778z"/>
+            </svg>
+        </span>
     <div class="row">
         <div class="col-md-12">
             <?php if (isset($posts) && count($posts) > 0): ?>
@@ -25,7 +31,7 @@ include '/var/www/html/controllers/posts/allPosts.php';
                                 <img src="<?php echo htmlspecialchars($post['image_url']); ?>" alt="Post Image" class="img-fluid mt-2">
                             <?php endif; ?>
                             <p class="card-text"><small class="text-muted"><?php echo $post['created_at']; ?></small></p>
-                            <button class="btn btn-primary like-button" data-post-id="<?php echo $post['id']; ?>"><i class="fa-solid fa-thumbs-up"></i> Polub</button>
+                            <button class="btn btn-primary like-button" data-post-id="<?php echo $post['id']; ?>">Polub</button>
                             <span class="like-count"><?php echo $post['like_count']; ?> Liczba polubień</span>
                         </div>
                     </div>
