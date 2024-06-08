@@ -123,7 +123,7 @@
             <input type="password" class="form-control" id="password" name="password" required>
         </div>
         <button type="submit" class="btn btn-primary btn-block">Zarejestruj się</button>
-        <p>Masz już konto? <a href="/views/login.php">Zaloguj się</a></p>
+        <p>Masz już konto? <a href="/views/dashboard.php">Zaloguj się</a></p>
     </form>
 </div>
 

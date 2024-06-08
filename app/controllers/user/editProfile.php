@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $avatarUrl = null;
 
     if (!empty($_FILES["avatar"]["name"])) {
-        $targetDir = "/var/www/html/uploads/avatars/";
+        $targetDir = "/var/www/html/resources/img/";
         $targetFile = $targetDir . basename($_FILES["avatar"]["name"]);
         $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
 
@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         if (move_uploaded_file($_FILES["avatar"]["tmp_name"], $targetFile)) {
-            $avatarUrl = '/uploads/avatars/' . basename($_FILES["avatar"]["name"]);
+            $avatarUrl = '/resources/img/' . basename($_FILES["avatar"]["name"]);
         } else {
             echo "Sorry, there was an error uploading your file.";
             exit();

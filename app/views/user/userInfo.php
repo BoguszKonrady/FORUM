@@ -6,29 +6,26 @@
                 </div>
                 <div class="profile-picture-container">
                     <div class="profile-picture">
-                    <img src="../resources/profile-img/profile.jpg" alt="Profile Picture" onclick="expandImage('../resources/profile-img/profile.jpg')">
+                        <img src="http://localhost:8080/<?php echo htmlspecialchars($user['avatar_url']); ?>" class="avatar" alt="User Avatar">
                     </div>
                 </div>
                 <h2><?php echo htmlspecialchars($user['username']); ?></h2>
                 <p class="card-text"><?php echo htmlspecialchars($user['email']); ?></p>
                 <p>Użytkownik od: <?php echo htmlspecialchars($user['created_at']); ?></p>
                
-               
+        
         </div>
     </div>
                 <div class="profile-stats">
                     <div>
                         <strong>69</strong>
-                        <span>Post</span>
+                        <span>Postów</span>
                     </div>
                     <div>
                         <strong>420</strong>
-                        <span>Followers</span>
+                        <span>Znajomi</span>
                     </div>
-                    <div>
-                        <strong>2137</strong>
-                        <span>Following</span>
-                    </div>
+                    
                     
                 </div>
                 <div>
