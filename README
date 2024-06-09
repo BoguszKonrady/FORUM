@@ -23,5 +23,18 @@ Explanation of dependencies:
 
 Tips:
   - extension "Docker" for visual studio code - introduces the ability to execute docker commands from the VS Code terminal
-  - to stop 
-  - after pulling repository from main branch, change branch to dedicaded
+  
+
+You can load example data:
+1.Go to localhost:8081
+2.Login as a root with login:root and pass:example
+3.Choose mydatabase and use import option
+4.From your computer choose FORUM/baza danych do zaimportowania/mydatabase_fin.sql file
+5.You should got green prompt with information about succesfull import
+
+To use site you can register or login with already created account for example- login:karolinavorona@example.com and password: Zn4wUSGxAb
+
+Site got responsiveness only for 2 views(depend of width):
+~1920px
+~420px
+
