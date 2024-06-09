@@ -23,9 +23,9 @@
         .profile-header .avatar {
             position: absolute;
             bottom: -50px;
-            left: 20px;
-            width: 100px;
-            height: 100px;
+            margin-left: 50px;
+            width: 250px;
+            height: 250px;
             border-radius: 50%;
             border: 3px solid #fff;
         }

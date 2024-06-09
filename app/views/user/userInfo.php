@@ -13,7 +13,7 @@
                 <p class="card-text"><?php echo htmlspecialchars($user['email']); ?></p>
                 <p>Użytkownik od: <?php echo htmlspecialchars($user['created_at']); ?></p>
                
-        
+               
         </div>
     </div>
                 <div class="profile-stats">

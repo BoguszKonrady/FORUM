@@ -9,17 +9,7 @@ body {
 .nav-link {
     color: #fff !important;
 }
-.sidebar
-{
-    background-color: #fff;
-    border-radius: 20px !important;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    margin: 0 15px;
-    padding: 20px;
-    width: 75%; /* Zmniejszenie szerokości */
-    margin-left: auto; 
-    margin-right: auto; 
-}
+
 .content, .right-sidebar {
     background-color: #fff;
     border-radius: 8px;
@@ -43,12 +33,7 @@ body {
     padding: 20px;
     text-align: center;
 }
-.col-md-6
-{
-    max-width: 100% !important;
-    border:0px !important;
-    
-}/*Zdjęcie w tle */
+/*Zdjęcie w tle */
 .cover-photo {
     position: relative;
     width: auto;
@@ -111,13 +96,13 @@ p.card-text
     margin-top: -10px;
 }
 .col-md-3.sidebar {
-    background-color: transparent;
+    background-color:#f0f2f5;
     border: none;
     box-shadow: none;
     margin: 0;
     padding-left: 60px;
     text-align: center;
-    width: 30% !important;
+    width: 100% !important ;
 }
 .container-fluid
 {
@@ -441,4 +426,36 @@ navbar-toggler
 }
 #searchResults {
     display: none; /* Początkowo ukryj wyniki wyszukiwania */
+}
+/* Style dla sidebarów */
+.sidebar {
+    background-color: #fff;
+    border-radius: 20px !important;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    margin: 0 auto 20px auto; /* Marginesy: góra, auto (środek), dół, auto (środek) */
+    padding: 20px;
+    width: 75% !important; /* Szerokość side bara domyślnie */
+}
+
+/* Style dla prawego sidebar */
+.right-sidebar {
+    background-color: #fff;
+    border-radius: 20px !important;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    margin: 0 auto 20px auto; /* Marginesy: góra, auto (środek), dół, auto (środek) */
+    padding: 20px;
+    width: 75% !important; /* Szerokość side bara domyślnie */
+}
+
+/* Media query dla responsywności */
+@media screen and (max-width: 1500px) {
+    .sidebar, .col-md-3.sidebar {
+        width: 97% !important; /* Szerokość side bara na 100% przy małych ekranach */
+        padding-left:35px;
+    }
+    .col-md-6 {
+        padding-left: 20px !important;
+        width:90%;
+    
+    }
 }

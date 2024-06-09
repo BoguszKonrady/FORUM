@@ -85,9 +85,16 @@ include '/var/www/html/controllers/user/loggedUser.php';
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 <script>
+<<<<<<< HEAD
 function expandImage(src) {
     var modal = document.createElement("div");
     modal.classList.add("modal");
+=======
+    function expandImage(src) {
+        // Tworzenie elementów modal
+        var modal = document.createElement("div");
+        modal.classList.add("modal");
+>>>>>>> 7f6836f371f3d0c0c6eca24848be51ef6e6ed353
 
         var modalContent = document.createElement("img");
         modalContent.classList.add("modal-content");
@@ -100,6 +107,7 @@ function expandImage(src) {
             document.body.removeChild(modal);
         };
 
+<<<<<<< HEAD
     modal.appendChild(modalContent);
     modal.appendChild(closeBtn);
 
@@ -184,6 +192,18 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+=======
+        // Dodanie elementów do modal
+        modal.appendChild(modalContent);
+        modal.appendChild(closeBtn);
+
+        // Dodanie modal do dokumentu
+        document.body.appendChild(modal);
+
+        // Wyświetlenie modal
+        modal.style.display = "block";
+    }
+>>>>>>> 7f6836f371f3d0c0c6eca24848be51ef6e6ed353
 </script>
 </body>
 </html>

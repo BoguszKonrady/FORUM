@@ -11,7 +11,7 @@ include '/var/www/html/controllers/user/profile.php';
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="/views/style/style.css">
     <link rel="stylesheet" href="/views/style/style-nav.css">
-    <link rel="stylesheet" href="/views/style/profile.css">
+
     <link rel="icon" href="http://localhost:8080/resources/img/logo.png" type="image/png">
 </head>
 <body>
